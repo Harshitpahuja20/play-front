@@ -5,7 +5,7 @@ import downloadBtn from "../../assets/image/png/download-btn.png";
 
 const HomeAboutSection = () => {
   return (
-    <div className="py-5 ff_p bg-dark" style={{ minHeight: "90vh" }}>
+    <div className="py-5 ff_p bg-dark" style={{ minHeight: "80vh" }}>
       <Container>
         <Row className="align-items-center text-white bg-dark">
         <Col md={6}>

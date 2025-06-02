@@ -60,38 +60,24 @@ const ContactUsHero = () => {
               all international station to guarantee that your load will safely
               reach without any delays.
             </p>
-            <div className="mt-4">
-              <h6 className="fw-bold mb-0 ">Postal Address :</h6>
-              <p className=" mb-0 mt-1">Hisar Haryana India, 125001</p>
-            </div>
             <div className="border w-100 my-4"></div>
             <Row>
-              <Col md={6}>
+              <Col md={12}>
                 <h6 className="fw-bold mb-0 ">Phone :</h6>
                 <p className=" mb-0 mt-1">+91 94668-20098</p>
-              </Col>
-              <Col md={6}>
-                <h6 className="fw-bold mb-0 ">Email :</h6>
-                <p className=" mb-0 mt-1">shiskhasangamindia@gmail.com</p>
               </Col>
             </Row>
             <div className="border w-100 my-4"></div>
             <Row>
-              <Col md={6}>
+              <Col md={12}>
                 <h6 className="fw-bold mb-0 ">Website :</h6>
-                <p className=" mb-0 mt-1">https://www.shikshasangam.in</p>
-              </Col>
-              <Col md={6}>
-                <h6 className="fw-bold mb-0 ">Website :</h6>
-                <p className=" mb-0 mt-1">
-                  Facebook / Instagram - shikshasangamindia
-                </p>
+                <p className=" mb-0 mt-1">https://www.win10.fun</p>
               </Col>
             </Row>
           </Col>
           <Col md={6} className="mt-4 mt-md-0">
             <Row>
-              <Col className="mt-4" md={6}>
+              <Col className="mt-4" md={12}>
                 <input
                   className="py-3 px-4 customInput rounded-2 w-100"
                   type="text"
@@ -101,7 +87,7 @@ const ContactUsHero = () => {
                   value={formData?.fullName}
                 />
               </Col>
-              <Col className="mt-4" md={6}>
+              <Col className="mt-4" md={12}>
                 <input
                   className="py-3 px-4 customInput rounded-2 w-100"
                   type="number"
@@ -112,31 +98,11 @@ const ContactUsHero = () => {
                 />
               </Col>
               <Col className="mt-4" md={12}>
-                <input
-                  className="py-3 px-4 customInput rounded-2 w-100"
-                  type="email"
-                  placeholder="Enter Your Email"
-                  name="email"
-                  onChange={handleChange}
-                  value={formData?.email}
-                />
-              </Col>
-              <Col className="mt-4" md={12}>
-                <input
-                  className="py-3 px-4 customInput rounded-2 w-100"
-                  type="text"
-                  placeholder="Subject"
-                  name="subject"
-                  onChange={handleChange}
-                  value={formData?.subject}
-                />
-              </Col>
-              <Col className="mt-4" md={12}>
                 <textarea
                   name="comment"
                   id="w3review"
                   rows="4"
-                  placeholder="Enter Your Comment"
+                  placeholder="Enter Your Query"
                   className="py-3 px-4 customInput rounded-2 w-100"
                   onChange={handleChange}
                   value={formData?.comment}

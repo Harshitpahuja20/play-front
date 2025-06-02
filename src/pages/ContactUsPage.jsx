@@ -8,9 +8,9 @@ const ContactUsPage = () => {
     window.scrollTo(0, 0); // Scroll to top
   }, []);
   return (
-    <div>
-      <CustomNavbar />
-      <BannerSection title="Contact Us" page="Contact Us" />
+    <div id="contact-us">
+      {/* <CustomNavbar /> */}
+      {/* <BannerSection title="Contact Us" page="Contact Us" /> */}
       <ContactUsHero />
     </div>
   );

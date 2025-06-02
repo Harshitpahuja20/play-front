@@ -17,6 +17,9 @@ import AdminStreams from "./admin/pages/AdminCards";
 import AdminCards from "./admin/pages/AdminCards";
 import AdminUsers from "./admin/pages/AdminUsers";
 import AdminRounds from "./admin/pages/AdminRounds";
+import DisclaimerPage from "./pages/disclaimer";
+import PrivacyPolicyPage from "./pages/privacy-policy";
+import TermsOfService from "./pages/terms";
 
 function App() {
   const { currentUser } = useStudy();
@@ -39,10 +42,14 @@ function App() {
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route
-          path="/terms-and-conditions"
-          element={<TermsAndConditionsPage />}
+          path="/terms-of-service"
+          element={<TermsOfService />}
+        />
+        <Route
+          path="/disclaimer"
+          element={<DisclaimerPage />}
         />
 
         {/* Admin Login with redirect if already logged in */}

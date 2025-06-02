@@ -38,15 +38,15 @@ const CustomNavbar = () => {
                 <span className="navbar-toggler-icon" />
               </Button>
               <Nav className="d-none d-lg-flex gap-3">
-                <Nav.Link as={Link} to="/" className="text-white">
+                <a href="#" className="text-white mt-2">
                   Home
-                </Nav.Link>
-                <Nav.Link as={Link} to="/result" className="text-white">
+                </a>
+              {/*  <Nav.Link as={Link} to="/result" className="text-white">
                   Result
-                </Nav.Link>
-                <Nav.Link as={Link} to="/contact" className="text-white">
+                </Nav.Link> */}
+                <a href="#contact-us" className="text-white mt-2">
                   Contact
-                </Nav.Link>
+                </a>
               </Nav>
             </div>
           </Container>
