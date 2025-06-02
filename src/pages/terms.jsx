@@ -3,12 +3,12 @@ import React from "react";
 const TermsOfService = () => {
   return (
     <div style={styles.container}>
-         <h1>Terms of Service - playwinindia.fun</h1>
+      <h1>Terms of Service - playwinindia.fun</h1>
       <p>
         All products and services, including but not limited to the website and
-        mobile app and the games and services provided through them (referred
-        to collectively as "Services" hereinafter), provided to you and offered
-        by playwinindia and/or its affiliates, subsidiaries, associates and
+        mobile app and the games and services provided through them (referred to
+        collectively as "Services" hereinafter), provided to you and offered by
+        playwinindia and/or its affiliates, subsidiaries, associates and
         partners (hereinafter referred to as "We/we" or "Us/us", “playwinindia”
         or "playwinindia.fun" or "Our/our") through the website and/or mobile
         app (hereinafter referred to as "Website/Mobile App") are subject to
@@ -21,8 +21,8 @@ const TermsOfService = () => {
         Service prior to your use of our Services. "You" in these Terms of
         Service refers to "user", "player", as well as every visitor to our
         Website/Mobile App. By registering on playwinindia, you agree to receive
-        notifications via SMS/RCS and follow our Terms of Service, Privacy Policy
-        and Game Rules.
+        notifications via SMS/RCS and follow our Terms of Service, Privacy
+        Policy and Game Rules.
       </p>
 
       <h2>Agreement</h2>
@@ -50,8 +50,8 @@ const TermsOfService = () => {
 
       <p>
         We provide our users/players with an excellent opportunity to enjoy our
-        multiplayer games 24x7. Using our seamless software and IT services,
-        you can play online games, a game of skill, with other online players on
+        multiplayer games 24x7. Using our seamless software and IT services, you
+        can play online games, a game of skill, with other online players on
         playwinindia.fun. Our Services are only intended to allow you to play
         games for the sole purpose of entertainment.
       </p>
@@ -71,8 +71,8 @@ const TermsOfService = () => {
 
       <p>
         You can play free games on playwinindia.fun. However, people living in
-        Andhra Pradesh, Assam, Meghalaya, Odisha, Sikkim, Nagaland, and Telangana
-        are not permitted to play our cash games/tournaments as the
+        Andhra Pradesh, Assam, Meghalaya, Odisha, Sikkim, Nagaland, and
+        Telangana are not permitted to play our cash games/tournaments as the
         aforementioned states do not allow their residents to play real money
         games.
       </p>
