@@ -51,8 +51,8 @@ const ContactUsHero = () => {
   return (
     <div className="py-5 ff_p">
       <Container className="py-md-4">
-        <Row className=" align-items-center">
-          <Col className="pe-md-5" md={6}>
+        <Row className=" align-items-start">
+          <Col className="pe-md-5 mt-4" md={6}>
             <h4 className="fw-bold mb-0 ">Feel Free To Contact Us</h4>
             <p className=" mb-0 mt-1">
               We are experienced in handling the formalities and
@@ -60,13 +60,6 @@ const ContactUsHero = () => {
               all international station to guarantee that your load will safely
               reach without any delays.
             </p>
-            <div className="border w-100 my-4"></div>
-            <Row>
-              <Col md={12}>
-                <h6 className="fw-bold mb-0 ">Phone :</h6>
-                <p className=" mb-0 mt-1">+91 94668-20098</p>
-              </Col>
-            </Row>
             <div className="border w-100 my-4"></div>
             <Row>
               <Col md={12}>

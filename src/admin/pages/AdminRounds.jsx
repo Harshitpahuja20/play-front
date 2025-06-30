@@ -37,14 +37,13 @@ const AdminRounds = () => {
     });
 
   function getTimeIgnoringTimezone(isoString, amPm = false) {
-    // Remove the 'Z' to treat as local time, not UTC
-    const withoutZ = isoString.replace(/Z$/, "");
-    return new Date(withoutZ).toLocaleTimeString("en-US", {
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: amPm,
-    });
-  }
+    return new Date(isoString).toLocaleTimeString("en-US", {
+    timeZone: "Asia/Kolkata",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: amPm,
+  });
+}
 
   // fetch rows, optionally filtered
   const fetchData = async (filters = {}) => {

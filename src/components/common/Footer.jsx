@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className=" bg-light ff_p pt-md-5 pt-4">
-      <div className="container">
+      <div className="">
         <div className="row justify-content-between">
-          <div className=" col-md-4  col-sm-6 col-12 ">
+          <div className=" col-md-4  col-sm-6 col-11 ">
             <ul className="ps-0 ">
               <Link to="/about">
                 <li className="fs_16 mt-4 mt-md-0 fw-bold text-decoration-none list-unstyled ff_n clr_theme">

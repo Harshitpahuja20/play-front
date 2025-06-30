@@ -41,9 +41,9 @@ const CustomNavbar = () => {
                 <a href="#" className="text-white mt-2">
                   Home
                 </a>
-              {/*  <Nav.Link as={Link} to="/result" className="text-white">
+               <Nav.Link as={Link} to="/result" className="text-white">
                   Result
-                </Nav.Link> */}
+                </Nav.Link>
                 <a href="#contact-us" className="text-white mt-2">
                   Contact
                 </a>

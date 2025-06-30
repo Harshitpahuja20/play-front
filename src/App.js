@@ -20,6 +20,7 @@ import AdminRounds from "./admin/pages/AdminRounds";
 import DisclaimerPage from "./pages/disclaimer";
 import PrivacyPolicyPage from "./pages/privacy-policy";
 import TermsOfService from "./pages/terms";
+import Result from "./pages/result";
 
 function App() {
   const { currentUser } = useStudy();
@@ -50,6 +51,10 @@ function App() {
         <Route
           path="/disclaimer"
           element={<DisclaimerPage />}
+        />
+        <Route
+          path="/result"
+          element={<Result />}
         />
 
         {/* Admin Login with redirect if already logged in */}

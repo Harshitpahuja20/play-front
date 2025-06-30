@@ -1,13 +1,16 @@
-import React from 'react'
-import { Row, Col } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const getCurrentYear = () => new Date().getFullYear()
+const getCurrentYear = () => new Date().getFullYear();
 
 const WinFooter = () => {
   return (
-    <div className="bg-light text-center py-3">
-      <Row className="justify-content-center mb-2">
+    <div
+      
+      className="text-center py-3 bg-light"
+    >
+      <Row className="justify-content-center mb-2 w-100 m-0">
         <Col xs="auto">
           <Link to="/privacy-policy" className="text-decoration-none mx-2">
             Privacy Policy
@@ -22,15 +25,15 @@ const WinFooter = () => {
           </Link>
         </Col>
       </Row>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center w-100 m-0">
         <Col xs="auto">
           <small className="text-muted">
-            © {getCurrentYear()}. rights reserved.
+            © {getCurrentYear()}. All rights reserved.
           </small>
         </Col>
       </Row>
     </div>
-  )
-}
+  );
+};
 
-export default WinFooter
+export default WinFooter;

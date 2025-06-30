@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import aboutImg from "../../assets/image/png/cards.png";
 import downloadBtn from "../../assets/image/png/download-btn.png";
+import { handleAppDownload } from "../../services/common.service";
 
 const HomeAboutSection = () => {
   return (
@@ -23,7 +24,7 @@ const HomeAboutSection = () => {
             <p className=" ff_p mt-3 fs-2">
             Download करने के लिए नीचे दिए गए बटन पर क्लिक करें। 👇👇
             </p>
-            <a href="#" className="ps-0 outline-0 cursor-pointer">
+            <a href="#" className="ps-0 outline-0 cursor-pointer" onClick={()=>handleAppDownload()}>
               <img src={downloadBtn} alt="" className="fit-contain" width={"350"} />
             </a>
           </Col>
