@@ -4,6 +4,7 @@ import HomeAboutSection from "../components/homepage/HomeAboutSection";
 import ContactUsPage from "./ContactUsPage";
 import ScreenDesigns from "./ScreenDesigns";
 import WinFooter from "../components/common/winfooter";
+import Homeresult2 from "../components/homepage/Homeresult2";
 
 const HomePage = () => {
   window.scrollTo({ top: 0, behavior: "instant" });
@@ -12,7 +13,8 @@ const HomePage = () => {
     <div>
       <CustomNavbar />
       <HomeAboutSection />
-      <ScreenDesigns/>
+      {/* <ScreenDesigns/> */}
+      <Homeresult2/>
       <ContactUsPage/>
       <WinFooter/>
     </div>
