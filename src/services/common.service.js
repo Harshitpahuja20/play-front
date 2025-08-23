@@ -34,3 +34,8 @@ export const getAllResults = async (limit = Infinity) => {
     },
   });
 };
+
+export const handleLogout = () => {
+  localStorage.removeItem("token");
+  window.location.reload();
+};

@@ -3,10 +3,12 @@ import { getAuth } from "../../services/auth.service";
 
 const baseUrl = process.env.REACT_APP_API_URL;
 
-const ADD_USERS= `${baseUrl}/api/stream/create`;
-const UPDATE_USERS = `${baseUrl}/api/stream/update`;
-const VIEW_USERS = `${baseUrl}/api/getAllUsers`;
-const DELETE_USERS = `${baseUrl}/api/stream/delete`;
+const ADD_USERS= `${baseUrl}/api/admin/user/create`;
+const UPDATE_USERS = `${baseUrl}/stream/update`;
+const VIEW_USERS = `${baseUrl}/api/admin/getAllSubadmin`;
+const VIEW_USERS_FOR_SUBADMIN = `${baseUrl}/api/subadmin/users`;
+const MY_USERS_FOR_SUBADMIN = `${baseUrl}/api/subadmin/getSubAdminUsers`;
+const DELETE_USERS = `${baseUrl}/stream/delete`;
 
 export const addUser = async (data) => {
   return axios.post(`${ADD_USERS}`, data, {
@@ -17,26 +19,7 @@ export const addUser = async (data) => {
 };
 
 export const getUsers = async (page = 1, filters) => {
-  const params = new URLSearchParams();
-  params.append("page", String(page));
-  params.append("limit", Infinity);
-
-  const [startDate, endDate] = filters?.dateRange || [];
-
-  if (startDate) {
-    params.append("start_date", startDate.toISOString());
-  }
-  if (endDate) {
-    params.append("end_date", endDate.toISOString());
-  }
-  if (filters?.status) {
-    params.append("status", filters.status);
-  }
-  if (filters?.userId) {
-    params.append("userId", filters.userId);
-  }
-
-  return axios.get(`${VIEW_USERS}?${params.toString()}` , {
+  return axios.get(`${VIEW_USERS}` , {
     headers: {
       Authorization: getAuth()?.token,
     },
@@ -53,6 +36,22 @@ export const deleteUsers = async (id) => {
 
 export const updateUser = async (data) => {
   return axios.put(`${UPDATE_USERS}`, data, {
+    headers: {
+      Authorization: getAuth()?.token,
+    },
+  });
+};
+
+export const getUsersforSubAdmin = async (query) => {
+  return axios.get(`${VIEW_USERS_FOR_SUBADMIN}?q=${query}` , {
+    headers: {
+      Authorization: getAuth()?.token,
+    },
+  });
+};
+
+export const getSubAdminUsers = async () => {
+  return axios.get(`${MY_USERS_FOR_SUBADMIN}` , {
     headers: {
       Authorization: getAuth()?.token,
     },

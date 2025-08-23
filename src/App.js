@@ -21,6 +21,10 @@ import DisclaimerPage from "./pages/disclaimer";
 import PrivacyPolicyPage from "./pages/privacy-policy";
 import TermsOfService from "./pages/terms";
 import Result from "./pages/result";
+import AdminSubadmins from "./admin/pages/AdminSubadmins";
+import SubAdminLayout from "./admin/layout/SubAdminLayout";
+import SubAdminMyUsers from "./admin/pages/SubAdminMyUsers";
+import SubAdminUses from "./admin/pages/SubAdminUses";
 
 function App() {
   const { currentUser } = useStudy();
@@ -30,7 +34,14 @@ function App() {
 
   // Admin private route that checks for either token or admin role
   const AdminPrivateRoute = ({ children }) => {
-    if (token || (currentUser && currentUser.role === "admin")) {
+    if (currentUser && currentUser.role === "admin") {
+      return children;
+    }
+    return <Navigate to="/" />;
+  };
+
+  const SubAdminPrivateRoute = ({ children }) => {
+    if (currentUser && currentUser.role === "subadmin") {
       return children;
     }
     return <Navigate to="/" />;
@@ -44,25 +55,18 @@ function App() {
         {/* Public Routes */}
         <Route path="/" element={<HomePage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-        <Route
-          path="/terms-of-service"
-          element={<TermsOfService />}
-        />
-        <Route
-          path="/disclaimer"
-          element={<DisclaimerPage />}
-        />
-        <Route
-          path="/result"
-          element={<Result />}
-        />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/disclaimer" element={<DisclaimerPage />} />
+        <Route path="/result" element={<Result />} />
 
         {/* Admin Login with redirect if already logged in */}
         <Route
           path="/admin/login"
           element={
-            token || (currentUser && currentUser.role === "admin") ? (
+            currentUser && currentUser.role === "admin" ? (
               <Navigate to="/admin/dashboard" />
+            ) : currentUser && currentUser.role === "subadmin" ? (
+              <Navigate to="/subadmin/dashboard" />
             ) : (
               <AdminLogin />
             )
@@ -94,7 +98,22 @@ function App() {
           <Route path="users" element={<AdminUsers />} />
           <Route path="cards" element={<AdminCards />} />
           <Route path="rounds" element={<AdminRounds />} />
+          <Route path="subadmins" element={<AdminSubadmins />} />
           <Route path="*" element={<Navigate to={"dashboard"} />} />
+        </Route>
+
+        {/* Protected subAdmin Routes */}
+        <Route
+          path="/subadmin/*"
+          element={
+            <SubAdminPrivateRoute>
+              <SubAdminLayout />
+            </SubAdminPrivateRoute>
+          }
+        >
+          <Route path="myusers" element={<SubAdminMyUsers />} />
+          <Route path="users" element={<SubAdminUses />} />
+          <Route path="*" element={<Navigate to={"myusers"} />} />
         </Route>
       </Routes>
     </>

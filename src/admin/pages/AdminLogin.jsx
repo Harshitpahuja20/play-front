@@ -10,9 +10,8 @@ const AdminLogin = () => {
   const navigate = useNavigate();
   const { setCurrentUser } = useStudy();
   const [formData, setFormData] = useState({
-    fullName: "admin",
-    password: "123456",
-    role: "admin",
+    fullName: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -21,7 +20,7 @@ const AdminLogin = () => {
 
   const handleSubmit = async () => {
     if (!formData.fullName)
-      return toast.warning("Please enter fullName!");
+      return toast.warning("Please enter phone Number!");
 
     if (!formData.password || formData.password.length < 3)
       return toast.warning("Password must contain three characters!");
@@ -63,13 +62,13 @@ const AdminLogin = () => {
             <Col md={6} lg={4}>
               <div className="card p-4">
                 <h4 className=" clr_theme fw-bold mb-0 ff_p">
-                  Access Admin Panel
+                  Access Panel
                 </h4>
                 <p className=" mb-0 ff_p mt-1">
                   Check your all details before submit
                 </p>
                 <div className="d-flex mt-4 ff_p flex-column">
-                  <label htmlFor="EnrollmentNumber">Fullname</label>
+                  <label htmlFor="EnrollmentNumber">Phone Number</label>
                   <input
                     className="mt-2 py-2 px-3"
                     type="text"

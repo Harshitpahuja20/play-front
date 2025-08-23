@@ -4,10 +4,19 @@ import { getAuth } from "../../services/auth.service";
 const baseUrl = process.env.REACT_APP_API_URL;
 
 const ADD_BALANCE= `${baseUrl}/api/addBalance`;
+const WITHDRAW_BALANCE= `${baseUrl}/api/withdraw`;
 const VIEW_CARDS = `${baseUrl}/api/getAdminCards`;
 
 export const addBalance = async (data) => {
   return axios.post(`${ADD_BALANCE}`, data, {
+    headers: {
+      Authorization: getAuth()?.token,
+    },
+  });
+};
+
+export const withdraw = async (data) => {
+  return axios.post(`${WITHDRAW_BALANCE}`, data, {
     headers: {
       Authorization: getAuth()?.token,
     },

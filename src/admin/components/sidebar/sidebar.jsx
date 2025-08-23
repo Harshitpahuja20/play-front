@@ -9,7 +9,8 @@ import {
 } from "react-icons/fa";
 import { GiCardAceSpades, GiCardRandom } from "react-icons/gi";
 import logo from "../../../assets/image/svg/maineLogo.png";
-import { MdDeviceHub, MdGamepad } from "react-icons/md";
+import { MdVerifiedUser, MdGamepad } from "react-icons/md";
+import { handleLogout } from "../../../services/common.service";
 
 // ✅ Reusable Dropdown Component
 function DropdownMenu({ label, icon, items = [], basePath = "" }) {
@@ -74,6 +75,11 @@ function Sidebar({ isSidebarOpen }) {
       label: "Rounds",
       icon: <MdGamepad />,
     },
+    {
+      to: "/admin/subadmins",
+      label: "Sub Admins",
+      icon: <MdVerifiedUser />,
+    },
   ];
   
   return (
@@ -95,17 +101,12 @@ function Sidebar({ isSidebarOpen }) {
             {item.label}
           </Link>
         ))}
-
-        {/* ✅ Reusable Dropdown */}
-        <DropdownMenu
-          label="News"
-          icon={<FaTools />}
-          items={[
-            { to: "/admin/news/add", label: "Add" },
-            { to: "/admin/news/view", label: "List" },
-          ]}
-          basePath="/admin/news/add"
-        />
+         <button
+            className={`bg-danger rounded px-4 py-2 mt-2 text-white border-0 w-100 text-center`}
+            onClick={handleLogout}
+          >
+            Log out
+          </button>
       </div>
     </div>
   );

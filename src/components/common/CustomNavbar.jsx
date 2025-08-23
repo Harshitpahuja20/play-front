@@ -41,12 +41,15 @@ const CustomNavbar = () => {
                 <a href="#" className="text-white mt-2">
                   Home
                 </a>
-               <Nav.Link as={Link} to="/result" className="text-white">
+                <Nav.Link as={Link} to="/result" className="text-white">
                   Result
                 </Nav.Link>
                 <a href="#contact-us" className="text-white mt-2">
                   Contact
                 </a>
+                <Nav.Link as={Link} to="/admin/login" className="text-white">
+                  Login
+                </Nav.Link>
               </Nav>
             </div>
           </Container>
@@ -90,6 +93,9 @@ const CustomNavbar = () => {
               className="fs_12 ff_p text-white ps-0"
             >
               Contact
+            </Nav.Link>
+            <Nav.Link as={Link} to="/admin/login" className="fs_12 ff_p text-white ps-0">
+              Login
             </Nav.Link>
           </Nav>
         </Offcanvas.Body>
