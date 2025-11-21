@@ -5,7 +5,7 @@ const ALL_RESULTS = `${baseUrl}/api/getAllResultsUser`;
 
 export const handleAppDownload = () => {
   const link = document.createElement("a");
-  link.href = "https://oivaskincare.com/apk/win10.apk";
+  link.href = "https://luckiwin.com/api/apk/win10.apk";
   link.download = "win10.apk";
   document.body.appendChild(link);
   link.click();
